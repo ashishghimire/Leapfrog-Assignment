@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript">
+
+function validateForm() {
+    var x = document.forms["myForm"]["acc"].value;
+    if (x == null || x == "") {
+        alert("Account No cannot be empty");
+        return false;
+    }
+}
+
+</script>
+<form action="http:\\www.google.com">
+
+Bank 
+<input list="bank" name="Bank">
+<datalist id="bank">
+  <option value="Kumari Bank">
+  <option value="Nepal Investment Bank">
+  <option value="Himalayan Bank">
+  <option value="Standard Chartard Bank">
+</datalist>
+<br>
+Branch
+<input list="branch" name="Branch">
+<datalist id="branch">
+  <option value="putalisadak">
+  <option value="baneshwar">
+  <option value="new road">
+  <option value="kalanki">	 
+</datalist>
+
+<br>
+</form>
+
+<form name="myForm" action="http:\\www.google.com" onsubmit="return validateForm()" method="post">
+Account No 
+<input type="text" name="acc">
+<br>
+Amount 
+<input type="radio" name="amount" value= "Saving">Saving
+<input type="radio" name="amount" value= "Current">Current<br>
+
+Date<input id="date" name="Date">
+<br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
